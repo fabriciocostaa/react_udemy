@@ -1,13 +1,13 @@
 services:
   frontend:
     build:
-      context: .
-      dockerfile: dockerfile
+      context: ./chronos-pomodoro
+      dockerfile: ../dockerfile
     ports:
-      - "8080:5173"
+      - "5173:5173"
     network_mode: "bridge"
     volumes:
-      - .:/app
+      - ./chronos-pomodoro:/app
       - /app/node_modules
     environment:
     # Força o Vite a monitorar mudanças de arquivos dentro do container
