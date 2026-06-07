@@ -1,0 +1,14 @@
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: dockerfile
+    ports:
+      - "8080:5173"
+    network_mode: "bridge"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+    # Força o Vite a monitorar mudanças de arquivos dentro do container
+      - WATCHPACK_POLLING-true
