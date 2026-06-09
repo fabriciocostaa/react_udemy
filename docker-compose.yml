@@ -12,8 +12,5 @@ services:
     environment:
     # Força o Vite a monitorar mudanças de arquivos dentro do container
       - WATCHPACK_POLLING-true
-    develop:
-      watch:
-        - action: sync
-          path: .
-          target: /app
+      - CHOKIDAR_USERPOLLING=true
+      - FAST_REFRESH=true
