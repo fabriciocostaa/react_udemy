@@ -9,13 +9,13 @@ export default defineConfig({
     port: 5173,
     watch: {
       usePolling: true,
-      interval: 1000
+      interval: 1000 // verifica a cada 1 segundo
     },
     hmr: {
-      protocol: 'ws',
-      host: 'localhost',
-      port: 5173,
-      clientPort: 5173
+      protocol: 'ws',  // WebSocket
+      host: 'localhost',  // Onde o cliente se conecta
+      port: 5173,   
+      clientPort: 5173   // Porta no navegador
     }
   }
 })

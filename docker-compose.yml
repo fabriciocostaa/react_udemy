@@ -12,5 +12,5 @@ services:
     environment:
     # Força o Vite a monitorar mudanças de arquivos dentro do container
       - WATCHPACK_POLLING-true
-      - CHOKIDAR_USERPOLLING=true
-      - FAST_REFRESH=true
+      - CHOKIDAR_USERPOLLING=true # Força o uso de polling (verificação periódica) em vez de eventos nativos do sistema
+      - FAST_REFRESH=true  # Habilita Fast Refresh do React
