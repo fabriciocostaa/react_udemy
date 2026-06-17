@@ -1,9 +1,11 @@
+import { useTaskContext } from '../../contexts/TaskContext/useTaskContext';
 import styles from './styles.module.css'
+
  
 export function Count() {
+    const { state } = useTaskContext();
+
     return (        
-        <div className={styles.count}> 00:00 </div>
+        <div className={styles.count}> {state.formattedSecondsRemaining} </div>
     ) 
 }
-
-
